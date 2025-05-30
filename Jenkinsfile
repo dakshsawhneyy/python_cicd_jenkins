@@ -6,7 +6,7 @@ pipeline{
             steps{
                 sh '''
                 sudo apt update
-                sudo apt install python3-venv -y
+                sudo apt install python3 python3-venv python3-pip -y
                 '''
             }
         }
