@@ -14,6 +14,7 @@ pipeline{
             steps{
                 // Check if virtual Env is present or not
                 sh '''
+                #!/bin/bash
                 if [ !  -d "venv" ]; then   
                     echo "Creating Virtual Environment"
                     python3 -m venv venv
@@ -32,3 +33,4 @@ pipeline{
         }
     }
 }
+
