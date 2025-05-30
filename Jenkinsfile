@@ -5,8 +5,8 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 sh '''
-                sudo apt update
-                sudo apt install python3-venv -y
+                apt update
+                apt install python3-venv -y
                 '''
             }
         }
