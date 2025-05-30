@@ -2,6 +2,14 @@ pipeline{
     agent any
 
     stages{
+        stage('Install Dependencies'){
+            steps{
+                sh '''
+                sudo apt update
+                sudo apt install python3-venv -y
+                '''
+            }
+        }
         stage('Setup Python Environment'){
             steps{
                 // Check if virtual Env is present or not
